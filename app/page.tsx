@@ -3,6 +3,7 @@ import { Button } from "@radix-ui/themes";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const pathname = usePathname();
@@ -48,6 +49,7 @@ const Header = () => {
           color="gray"
           variant="solid"
           style={{ boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.25)" }}
+          onClick={() => window.open("/HamzaCV.pdf", "_blank")}
         >
           View CV
         </Button>
@@ -150,40 +152,38 @@ const SubContent = () => {
     <div className="flex flex-col border bg-gray-100 rounded-md w-full">
       <p className="font-medium my-2 px-2">Projects</p>
       <div className="my-2 flex flex-col gap-4 px-4">
-        <ProjectCard
-          leftIcon={
-            <Image
-              src="/thought-bubble.png"
-              width={30}
-              height={30}
-              alt="next icon"
-            />
-          }
-          title="ThoughtFlow"
-          subTitle="Design, Backend & Frontend"
-        />
+        <Link href="https://www.thoughtflow.app">
+          <ProjectCard
+            leftIcon={
+              <Image
+                src="/thought-bubble.png"
+                width={30}
+                height={30}
+                alt="next icon"
+              />
+            }
+            title="ThoughtFlow"
+            subTitle="Design, Backend & Frontend"
+          />
+        </Link>
 
-        <ProjectCard
-          leftIcon={
-            <Image src="/ai.png" width={30} height={30} alt="next icon" />
-          }
-          title="PromptBase"
-          subTitle="Design, Backend & Frontend"
-        />
+        <Link href="https://www.thoughtflow.app">
+          <ProjectCard
+            leftIcon={
+              <Image src="/ai.png" width={30} height={30} alt="next icon" />
+            }
+            title="PromptBase"
+            subTitle="Design, Backend & Frontend"
+          />
+        </Link>
       </div>
     </div>
   );
 };
 
 const ProjectCard = ({ leftIcon, title, subTitle }) => {
-  const handleClick = () => {
-    console.log("ProjectCard clicked");
-  };
   return (
-    <div
-      className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg"
-      onClick={handleClick}
-    >
+    <div className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg">
       <div className="pl-2 rounded-full">{leftIcon}</div>
 
       <div className="flex flex-col gap-2 pr-2">
