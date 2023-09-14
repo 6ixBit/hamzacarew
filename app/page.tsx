@@ -58,11 +58,11 @@ const Content = () => {
       <div className="flex flex-col gap-2 my-6 w-3/4">
         <h1 className="text-2xl font-bold"> Hamza Carew</h1>
 
-        <div className="bg-green-200 rounded-full flex items-center justify-center w-36">
+        <div className="bg-green-200 rounded-full flex items-center justify-center w-36 font-semibold">
           <h2>Fullstack Dev</h2>
         </div>
 
-        <h3 className="my-2">
+        <h3 className="my-2 font-medium">
           Shipping stuff as a solopreneur from Atlanta, GA.
         </h3>
 
@@ -116,6 +116,20 @@ const Content = () => {
             />
           </a>
         </div>
+      </div>
+
+      <SubContent />
+    </div>
+  );
+};
+
+const SubContent = () => {
+  return (
+    <div className="flex flex-col border bg-gray-100 rounded w-full">
+      <p className="font-medium my-2 px-2">Projects</p>
+      <div className="my-2 flex flex-col gap-4 px-4">
+        <p>Example Project </p>
+        <p>Example Project 2</p>
       </div>
     </div>
   );
