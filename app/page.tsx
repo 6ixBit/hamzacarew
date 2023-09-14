@@ -9,7 +9,7 @@ const Header = () => {
   const pathname = usePathname();
   const [page, setPage] = useState(pathname);
 
-  const handleClick = (path) => {
+  const handleClick = (path: string) => {
     setPage(path);
     console.log(pathname);
   };
@@ -181,7 +181,13 @@ const SubContent = () => {
   );
 };
 
-const ProjectCard = ({ leftIcon, title, subTitle }) => {
+interface ProjectCardProps {
+  leftIcon: JSX.Element;
+  title: string;
+  subTitle: string;
+}
+
+const ProjectCard = ({ leftIcon, title, subTitle }: ProjectCardProps) => {
   return (
     <div className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg">
       <div className="pl-2 rounded-full">{leftIcon}</div>
