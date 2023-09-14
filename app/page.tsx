@@ -1,28 +1,56 @@
+"use client";
 import { Button } from "@radix-ui/themes";
 import Image from "next/image";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+  const [page, setPage] = useState(pathname);
+
+  const handleClick = (path) => {
+    setPage(path);
+    console.log(pathname);
+  };
+
   return (
-    <div className="w-96 border-1 bg-white rounded-md flex items-center gap-6 px-6 h-12">
-      <div
-        style={{ transition: "transform 0.2s", borderRadius: "50%" }}
-        className="hover:scale-110 hover:bg-gray-300"
-      >
-        <Image src="/hut.png" width={20} height={20} alt="hut icon" />
+    <div className="w-96 border-1 bg-white rounded-md flex items-center gap-6 px-4 h-12 justify-between">
+      <div className="flex items-center gap-6">
+        <div
+          onClick={() => handleClick("/")}
+          style={{ transition: "transform 0.2s", borderRadius: "50%" }}
+          className={`hover:scale-110 ${page === "/" ? "bg-gray-300" : ""}`}
+        >
+          <Image src="/hut.png" width={20} height={20} alt="hut icon" />
+        </div>
+
+        <div
+          onClick={() => handleClick("/me")}
+          style={{ transition: "transform 0.2s", borderRadius: "31%" }}
+          className={`hover:scale-110 ${page === "/me" ? "bg-gray-300" : ""}`}
+        >
+          <Image src="/user.png" width={20} height={20} alt="user icon" />
+        </div>
+
+        <div
+          onClick={() => handleClick("/designs")}
+          style={{ transition: "transform 0.2s", borderRadius: "50%" }}
+          className={`hover:scale-110 ${
+            page === "/designs" ? "bg-gray-300" : ""
+          }`}
+        >
+          <Image src="/arts.png" width={24} height={24} alt="web design icon" />
+        </div>
       </div>
 
-      <div
-        style={{ transition: "transform 0.2s", borderRadius: "31%" }}
-        className="hover:scale-110 hover:bg-gray-300"
-      >
-        <Image src="/user.png" width={20} height={20} alt="user icon" />
-      </div>
-
-      <div
-        style={{ transition: "transform 0.2s", borderRadius: "50%" }}
-        className="hover:scale-110 hover:bg-gray-300"
-      >
-        <Image src="/arts.png" width={24} height={24} alt="web design icon" />
+      <div>
+        <Button
+          color="gray"
+          variant="solid"
+          style={{ boxShadow: "0px 1px 1px rgba(0, 0, 0, 0.25)" }}
+        >
+          View CV
+        </Button>
       </div>
     </div>
   );
@@ -31,8 +59,6 @@ const Header = () => {
 const Content = () => {
   return (
     <div className="border-red-500 h-max bg-white rounded-md shadow w-96 flex flex-col p-6">
-      {/* <p className="text-lg"> Software Developer </p> */}
-
       <div
         style={{
           width: 144,
@@ -62,13 +88,9 @@ const Content = () => {
           <h2>Fullstack Dev</h2>
         </div>
 
-        <h3 className="my-2 font-medium">
-          Shipping stuff as a solopreneur from Atlanta, GA.
+        <h3 className="my-2 font-medium text-gray-500">
+          Shipping code as a founder from port 1337.
         </h3>
-
-        {/* <Button variant="soft" size="1" style={{ width: "10rem" }}>
-          Copy Email
-        </Button> */}
 
         <div className="flex flex-row gap-4 mt-2">
           <a
@@ -125,11 +147,51 @@ const Content = () => {
 
 const SubContent = () => {
   return (
-    <div className="flex flex-col border bg-gray-100 rounded w-full">
+    <div className="flex flex-col border bg-gray-100 rounded-md w-full">
       <p className="font-medium my-2 px-2">Projects</p>
       <div className="my-2 flex flex-col gap-4 px-4">
-        <p>Example Project </p>
-        <p>Example Project 2</p>
+        <ProjectCard
+          leftIcon={
+            <Image
+              src="/thought-bubble.png"
+              width={30}
+              height={30}
+              alt="next icon"
+            />
+          }
+          title="ThoughtFlow"
+          subTitle="Design, Backend & Frontend"
+        />
+
+        <ProjectCard
+          leftIcon={
+            <Image src="/ai.png" width={30} height={30} alt="next icon" />
+          }
+          title="PromptBase"
+          subTitle="Design, Backend & Frontend"
+        />
+      </div>
+    </div>
+  );
+};
+
+const ProjectCard = ({ leftIcon, title, subTitle }) => {
+  const handleClick = () => {
+    console.log("ProjectCard clicked");
+  };
+  return (
+    <div
+      className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg"
+      onClick={handleClick}
+    >
+      <div className="pl-2 rounded-full">{leftIcon}</div>
+
+      <div className="flex flex-col gap-2 pr-2">
+        <div className="font-bold">{title}</div>
+        <div className="font-medium text-gray-500">{subTitle}</div>
+      </div>
+      <div className="pr-1">
+        <Image src="/next.png" width={20} height={20} alt="next icon" />
       </div>
     </div>
   );
