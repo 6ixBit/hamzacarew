@@ -3,10 +3,12 @@ import { Button } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
+import ContentContainer from "@/components/ContentContainer";
+import SubContentContainer from "@/components/SubContentContainer";
 
 const Content = () => {
   return (
-    <div className="border-red-500 h-max bg-white rounded-md shadow w-96 flex flex-col p-6">
+    <ContentContainer>
       <div
         style={{
           width: 144,
@@ -37,7 +39,7 @@ const Content = () => {
         </div>
 
         <h3 className="my-2 font-medium text-gray-500">
-          Shipping code as a founder from port 1337.
+          Shipping code from port 1337.
         </h3>
 
         <div className="flex flex-row gap-4 mt-2 justify-between w-full">
@@ -100,14 +102,13 @@ const Content = () => {
       </div>
 
       <SubContent title="Projects" />
-    </div>
+    </ContentContainer>
   );
 };
 
 const SubContent = ({ title }: { title: string }) => {
   return (
-    <div className="flex flex-col border bg-gray-100 rounded-md w-full">
-      <p className="font-medium my-2 px-2">{title}</p>
+    <SubContentContainer title={title}>
       <div className="my-2 flex flex-col gap-4 px-4">
         <Link href="https://www.thoughtflow.app">
           <ProjectCard
@@ -134,7 +135,7 @@ const SubContent = ({ title }: { title: string }) => {
           />
         </Link>
       </div>
-    </div>
+    </SubContentContainer>
   );
 };
 

@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hamza Carews Hub",
+  title: "Hamza Carew",
   description: "Hamza's personal website.",
 };
 

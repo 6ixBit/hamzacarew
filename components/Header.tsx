@@ -3,10 +3,12 @@
 import { Button } from "@radix-ui/themes";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [page, setPage] = useState(pathname);
 
   const handleClick = (path: string) => {
