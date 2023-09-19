@@ -34,8 +34,8 @@ const Content = () => {
       <div className="flex flex-col gap-2 my-6 w-full">
         <h1 className="text-2xl font-bold"> Hamza Carew</h1>
 
-        <div className="bg-green-200 rounded-full flex items-center justify-center w-28 font-semibold">
-          <h2>Fullstack Dev</h2>
+        <div className="bg-green-200 px-1 rounded-full flex items-center justify-center w-40 font-semibold">
+          <h2>Fullstack Developer.</h2>
         </div>
 
         <h3 className="my-2 font-medium text-gray-500">
@@ -140,9 +140,5 @@ const SubContent = ({ title }: { title: string }) => {
 };
 
 export default function Home() {
-  return (
-    <>
-      <Content />
-    </>
-  );
+  return <Content />;
 }

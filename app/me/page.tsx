@@ -52,7 +52,7 @@ const TimeLine = () => {
 const Page = () => {
   return (
     <ContentContainer>
-      <div className="text-xl font-bold mb-4">My Tech Stack</div>
+      <div className="text-xl font-bold mb-2">My Tech Stack</div>
 
       <SubContentContainer>
         <ProjectCard
@@ -73,7 +73,7 @@ const Page = () => {
               alt="next icon"
             />
           }
-          title="Typescirpt"
+          title="Typescript"
           subTitle="Frontend & Backend"
           disableRightIcon={true}
           textStyles="pr-22 ml-6"
@@ -106,7 +106,7 @@ const Page = () => {
         />
       </SubContentContainer>
 
-      <div className="text-xl font-bold mb-4 mt-4">Tech Timeline</div>
+      <div className="text-xl font-bold mb-2 mt-8">Tech Timeline</div>
       <SubContentContainer>
         <TimeLine />
       </SubContentContainer>
