@@ -9,7 +9,7 @@ const Page = () => {
     <ContentContainer>
       <div className="text-xl font-bold mb-4">My Designs</div>
 
-      <div className="flex flex-col gap-6 p-2">
+      <div className="flex flex-col gap-6">
         <DesignCard
           title="Man City fan page"
           image={
