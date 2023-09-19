@@ -34,7 +34,7 @@ const Content = () => {
       <div className="flex flex-col gap-2 my-6 w-full">
         <h1 className="text-2xl font-bold"> Hamza Carew</h1>
 
-        <div className="bg-green-200 rounded-full flex items-center justify-center w-36 font-semibold">
+        <div className="bg-green-200 rounded-full flex items-center justify-center w-28 font-semibold">
           <h2>Fullstack Dev</h2>
         </div>
 

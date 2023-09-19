@@ -14,6 +14,9 @@ const TimeLine = () => {
           <span className="flex flex-col">
             <span className=" font-extrabold">BenefitFocus</span>
             <p className=" text-gray-500 mt-1">Fullstack Software Engineer</p>
+            <div className="bg-green-200 w-24 rounded-full flex items-center justify-center font-semibold mt-2">
+              <h2>Current</h2>
+            </div>
           </span>
         </div>
       </div>
@@ -49,9 +52,33 @@ const TimeLine = () => {
 const Page = () => {
   return (
     <ContentContainer>
-      <div className="text-xl font-bold mb-4">Tech Stack</div>
+      <div className="text-xl font-bold mb-4">My Tech Stack</div>
 
       <SubContentContainer>
+        <ProjectCard
+          leftIcon={
+            <Image src="/react.png" width={30} height={30} alt="next icon" />
+          }
+          title="React JS"
+          subTitle="Frontend"
+          disableRightIcon={true}
+          textStyles="pr-44"
+        />
+        <ProjectCard
+          leftIcon={
+            <Image
+              src="/typescript.png"
+              width={30}
+              height={30}
+              alt="next icon"
+            />
+          }
+          title="Typescirpt"
+          subTitle="Frontend & Backend"
+          disableRightIcon={true}
+          textStyles="pr-22 ml-6"
+        />
+
         <ProjectCard
           leftIcon={
             <Image src="/nextjs.png" width={30} height={30} alt="next icon" />
