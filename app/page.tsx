@@ -155,17 +155,17 @@ const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
     }
   }, [show]);
 
-  useEffect(() => {
-    if (targetRef.current && notificationRef.current) {
-      const targetRect = targetRef.current.getBoundingClientRect();
-      const notificationRect = notificationRef.current.getBoundingClientRect();
+  // useEffect(() => {
+  //   if (targetRef.current && notificationRef.current) {
+  //     const targetRect = targetRef.current.getBoundingClientRect();
+  //     const notificationRect = notificationRef.current.getBoundingClientRect();
 
-      notificationRef.current.style.top = `${
-        targetRect.top - notificationRect.height
-      }px`;
-      notificationRef.current.style.left = `${targetRect.left}px`;
-    }
-  }, [targetRef]);
+  //     notificationRef.current.style.top = `${
+  //       targetRect.top - notificationRect.height
+  //     }px`;
+  //     notificationRef.current.style.left = `${targetRect.left}px`;
+  //   }
+  // }, [targetRef]);
 
   return (
     <>
