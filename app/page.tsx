@@ -5,6 +5,7 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import ContentContainer from "@/components/ContentContainer";
 import SubContentContainer from "@/components/SubContentContainer";
+import { useEffect, useState, useRef } from "react";
 
 const Content = () => {
   return (
@@ -89,15 +90,17 @@ const Content = () => {
               />
             </a>
           </div>
-          <Button
-            style={{ width: "7rem", height: "30px" }}
-            variant="soft"
-            onClick={() =>
-              navigator.clipboard.writeText("hamzacarew@gmail.com")
-            }
-          >
-            Copy Email
-          </Button>
+          <CopiedNotification>
+            <Button
+              style={{ width: "7rem", height: "30px" }}
+              variant="soft"
+              onClick={() =>
+                navigator.clipboard.writeText("hamzacarew@gmail.com")
+              }
+            >
+              Copy Email
+            </Button>
+          </CopiedNotification>
         </div>
       </div>
 
@@ -136,6 +139,46 @@ const SubContent = ({ title }: { title: string }) => {
         </Link>
       </div>
     </SubContentContainer>
+  );
+};
+
+const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
+  const [show, setShow] = useState(true);
+  const notificationRef = useRef(null);
+  const targetRef = useRef(null);
+
+  useEffect(() => {
+    if (show) {
+      setTimeout(() => {
+        setShow(false);
+      }, 2000);
+    }
+  }, [show]);
+
+  useEffect(() => {
+    if (targetRef.current && notificationRef.current) {
+      const targetRect = targetRef.current.getBoundingClientRect();
+      const notificationRect = notificationRef.current.getBoundingClientRect();
+
+      notificationRef.current.style.top = `${
+        targetRect.top - notificationRect.height
+      }px`;
+      notificationRef.current.style.left = `${targetRect.left}px`;
+    }
+  }, [targetRef]);
+
+  return (
+    <>
+      <div ref={targetRef}>{children}</div>
+      <div
+        ref={notificationRef}
+        className={`absolute m-6 p-2 rounded text-white bg-black transition-opacity duration-500 ${
+          show ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        Copied!
+      </div>
+    </>
   );
 };
 
