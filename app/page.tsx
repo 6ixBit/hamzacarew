@@ -145,7 +145,7 @@ const SubContent = ({ title }: { title: string }) => {
 const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
   const [show, setShow] = useState(true);
   const notificationRef = useRef(null);
-  const targetRef = useRef(null);
+  // const targetRef = useRef(null);
 
   useEffect(() => {
     if (show) {
@@ -169,15 +169,15 @@ const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <div ref={targetRef}>{children}</div>
-      <div
+      <div>{children}</div>
+      {/* <div
         ref={notificationRef}
         className={`absolute m-6 p-2 rounded text-white bg-black transition-opacity duration-500 ${
           show ? "opacity-100" : "opacity-0"
         }`}
       >
         Copied!
-      </div>
+      </div> */}
     </>
   );
 };
