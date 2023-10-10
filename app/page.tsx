@@ -133,7 +133,7 @@ const SubContent = ({ title }: { title: string }) => {
             leftIcon={
               <Image src="/ai.png" width={30} height={30} alt="next icon" />
             }
-            title="PromptBase"
+            title="PromptArena"
             subTitle="Design, Backend & Frontend"
           />
         </Link>
