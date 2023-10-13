@@ -1,16 +1,21 @@
+"use client";
+import { useRouter } from "next/navigation";
 import ContentContainer from "@/components/ContentContainer";
 import Image from "next/image";
 import DesignCard from "@/components/DesignCard";
 
-// TODO: Add carousel for each design when clicked.
-
 const Page = () => {
+  const router = useRouter();
+
   return (
     <ContentContainer>
       <div className="text-xl font-bold mb-4">My Designs</div>
 
       <div className="flex flex-col gap-6">
         <DesignCard
+          onClick={() => {
+            router.push("/design/mancity");
+          }}
           title="Man City fan page"
           image={
             <Image
@@ -23,6 +28,9 @@ const Page = () => {
         />
 
         <DesignCard
+          onClick={() => {
+            router.push("/design/thoughtflow");
+          }}
           title="ThoughtFlow IOS"
           image={
             <Image

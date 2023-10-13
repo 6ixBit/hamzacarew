@@ -1,14 +1,16 @@
+"use client";
 import { Inset, Flex, Card, Box, Text } from "@radix-ui/themes";
-
 const DesignCard = ({
   title,
   image,
+  onClick,
 }: {
   title: string;
   image: JSX.Element;
+  onClick: () => void;
 }) => {
   return (
-    <Card size="3">
+    <Card size="3" onClick={onClick}>
       <Flex>
         <Inset side="left" mr="4">
           <Flex
