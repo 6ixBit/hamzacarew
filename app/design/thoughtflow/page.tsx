@@ -81,6 +81,8 @@ const Page = () => {
           />
         </SwiperSlide>
 
+        {/* 
+        TODO: Add better images without white background, leaving them out for now.
         <SwiperSlide>
           <Image
             src="/ThoughtFlow-Recording-Design.png"
@@ -107,7 +109,7 @@ const Page = () => {
               borderBottomRightRadius: "5%",
             }}
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         <SwiperSlide>
           <Image
