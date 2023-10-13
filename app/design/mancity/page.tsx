@@ -27,9 +27,10 @@ const Page = () => {
       <Carousel>
         <SwiperSlide>
           <Image
-            src="/hamza.jpeg"
-            width={50}
-            height={50}
+            src="/HomePageOfManCityDesign.png"
+            width={250}
+            height={250}
+            quality={85}
             alt="Picture of Hamza"
             style={{
               borderBottomLeftRadius: "5%",
@@ -43,7 +44,10 @@ const Page = () => {
       </div>
 
       <div className="text-md mb-4 font-medium text-gray-500">
-        A mockup I made in Figma for a static Manchester City fan page.
+        This is a Figma mockup of a Manchester City fan page homepage. It
+        features two vertical grids for content allocation, a gradient header
+        and footer, social media buttons, and important links like terms and
+        privacy.
       </div>
     </ContentContainer>
   );

@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Carousel from "@/components/Carousel/Carousel";
 import { Button } from "@radix-ui/themes";
 import { SwiperSlide } from "swiper/react";
-import Swiper from "swiper";
 
 const Page = () => {
   const router = useRouter();
@@ -28,9 +27,94 @@ const Page = () => {
       <Carousel>
         <SwiperSlide>
           <Image
-            src="/hamza.jpeg"
-            width={50}
-            height={50}
+            src="/ThoughtFlow-Login-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-SignUp-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-Home-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-Categories-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-Recording-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-Settings-Design.png"
+            width={250}
+            height={250}
+            quality={85}
+            alt="Picture of Hamza"
+            style={{
+              borderBottomLeftRadius: "5%",
+              borderBottomRightRadius: "5%",
+            }}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image
+            src="/ThoughtFlow-UserCategory-Design.png"
+            width={250}
+            height={250}
+            quality={85}
             alt="Picture of Hamza"
             style={{
               borderBottomLeftRadius: "5%",
