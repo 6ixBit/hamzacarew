@@ -17,7 +17,7 @@ const ProjectCard = ({
 }: IProjectCard) => {
   return (
     <div className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg">
-      <div className="pl-2 rounded-full">{leftIcon}</div>
+      <div className="pl-2 md:pl-12 rounded-full">{leftIcon}</div>
 
       <div className={`flex flex-col gap-2 mx-auto ${textStyles || ""}`}>
         <div className="font-bold">{title}</div>

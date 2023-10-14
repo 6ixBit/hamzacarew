@@ -33,7 +33,7 @@ const Content = () => {
       </div>
 
       <div className="flex flex-col gap-2 my-6 w-full">
-        <h1 className="text-2xl font-bold"> Hamza Carew</h1>
+        <h1 className="text-2xl font-bold md:text-3xl"> Hamza Carew</h1>
 
         <div className="bg-green-200 px-1 rounded-full flex items-center justify-center w-40 font-semibold">
           <h2>Fullstack Developer.</h2>
