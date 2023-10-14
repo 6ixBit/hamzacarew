@@ -115,6 +115,7 @@ const SubContent = ({ title }: { title: string }) => {
       <div className="my-2 flex flex-col gap-4 px-4">
         <Link href="https://www.thoughtflow.app">
           <ProjectCard
+            hover={true}
             leftIcon={
               <Image
                 src="/thought-bubble.png"
@@ -128,8 +129,12 @@ const SubContent = ({ title }: { title: string }) => {
           />
         </Link>
 
-        <Link href="https://www.thoughtflow.app">
+        <Link
+          href="https://prompt-tester-alpha.vercel.app
+"
+        >
           <ProjectCard
+            hover={true}
             leftIcon={
               <Image src="/ai.png" width={30} height={30} alt="next icon" />
             }

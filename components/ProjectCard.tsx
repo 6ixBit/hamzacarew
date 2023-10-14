@@ -6,6 +6,7 @@ interface IProjectCard {
   subTitle: string;
   disableRightIcon?: boolean;
   textStyles?: string;
+  hover?: boolean;
 }
 
 const ProjectCard = ({
@@ -14,9 +15,14 @@ const ProjectCard = ({
   subTitle,
   disableRightIcon = false,
   textStyles,
+  hover = false,
 }: IProjectCard) => {
   return (
-    <div className="flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-lg">
+    <div
+      className={`flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-sm ${
+        hover ? "hover:shadow-xl transition-shadow duration-200" : ""
+      }`}
+    >
       <div className="pl-2 md:pl-12 rounded-full">{leftIcon}</div>
 
       <div className={`flex flex-col gap-2 mx-auto ${textStyles || ""}`}>

@@ -70,13 +70,13 @@ const Page = () => {
               src="/typescript.png"
               width={30}
               height={30}
-              alt="next icon"
+              alt="typescript icon"
             />
           }
           title="Typescript"
           subTitle="Frontend & Backend"
           disableRightIcon={true}
-          textStyles="pr-22 ml-6"
+          textStyles="ml-16"
         />
 
         <ProjectCard
@@ -89,7 +89,7 @@ const Page = () => {
         />
         <ProjectCard
           leftIcon={
-            <Image src="/figma.png" width={30} height={30} alt="next icon" />
+            <Image src="/figma.png" width={30} height={30} alt="figma icon" />
           }
           title="Figma"
           subTitle="Design, Wireframes & Prototyping"
@@ -98,7 +98,7 @@ const Page = () => {
 
         <ProjectCard
           leftIcon={
-            <Image src="/python.png" width={30} height={30} alt="next icon" />
+            <Image src="/python.png" width={30} height={30} alt="python icon" />
           }
           title="Python 3"
           subTitle="Scripting, Backend & Webscraping"
