@@ -24,7 +24,7 @@ const DesignCard = ({
         </Inset>
 
         <Box style={{ maxWidth: 400 }}>
-          <Text size="4">{title}</Text>
+          <p className="font-sans font-medium md:text-xl">{title}</p>
         </Box>
       </Flex>
     </Card>

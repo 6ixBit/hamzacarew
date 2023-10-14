@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <div className="w-96 border-1 bg-white rounded-md flex items-center gap-6 px-4 h-12 justify-between">
+    <div className="w-96 md:w-tablet border-1 bg-white rounded-md flex items-center gap-6 px-4 h-12 justify-between">
       <div className="flex items-center gap-6">
         <div
           onClick={() => handleClick("/")}

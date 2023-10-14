@@ -11,7 +11,7 @@ const Page = () => {
 
   return (
     <ContentContainer>
-      <div className="mb-2">
+      <div className="mb-3">
         <Button
           className="w-24"
           variant="soft"

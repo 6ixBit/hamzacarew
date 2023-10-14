@@ -21,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Theme radius="large" scaling="95%">
-          <main className="flex min-h-screen flex-col items-center pt-2 px-4 max-w-3/4 mx-auto bg-slate-300 gap-4">
+          <main
+            className="flex min-h-screen flex-col items-center pt-2 px-4 
+          max-w-3/4 mx-auto bg-slate-300 gap-4"
+          >
             <Header />
             {children}
           </main>
