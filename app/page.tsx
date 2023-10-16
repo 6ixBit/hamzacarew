@@ -7,7 +7,46 @@ import ContentContainer from "@/components/ContentContainer";
 import SubContentContainer from "@/components/SubContentContainer";
 import { useEffect, useState, useRef } from "react";
 
+const CopiedNotification = ({
+  show,
+  children,
+}: {
+  show: boolean;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div style={{ position: "relative" }}>
+      {show ? (
+        <div
+          style={{
+            position: "absolute",
+            bottom: "30px",
+            marginBottom: "0.5rem",
+            backgroundColor: "grey",
+            color: "white",
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+        >
+          Copied!
+        </div>
+      ) : null}
+      {children}
+    </div>
+  );
+};
+
 const Content = () => {
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleCopiedClick = () => {
+    navigator.clipboard.writeText("hamzacarew@gmail.com");
+    setShowNotification(true);
+    setTimeout(() => {
+      setShowNotification(false);
+    }, 1100);
+  };
+
   return (
     <ContentContainer>
       <div
@@ -90,13 +129,12 @@ const Content = () => {
               />
             </a>
           </div>
-          <CopiedNotification>
+
+          <CopiedNotification show={showNotification}>
             <Button
               style={{ width: "7rem", height: "30px" }}
               variant="soft"
-              onClick={() =>
-                navigator.clipboard.writeText("hamzacarew@gmail.com")
-              }
+              onClick={handleCopiedClick}
             >
               Copy Email
             </Button>
@@ -129,10 +167,7 @@ const SubContent = ({ title }: { title: string }) => {
           />
         </Link>
 
-        <Link
-          href="https://prompt-tester-alpha.vercel.app
-"
-        >
+        <Link href="https://prompt-tester-alpha.vercel.app">
           <ProjectCard
             hover={true}
             leftIcon={
@@ -144,25 +179,6 @@ const SubContent = ({ title }: { title: string }) => {
         </Link>
       </div>
     </SubContentContainer>
-  );
-};
-
-const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
-  const [show, setShow] = useState(true);
-  const notificationRef = useRef(null);
-
-  useEffect(() => {
-    if (show) {
-      setTimeout(() => {
-        setShow(false);
-      }, 2000);
-    }
-  }, [show]);
-
-  return (
-    <>
-      <div>{children}</div>
-    </>
   );
 };
 
