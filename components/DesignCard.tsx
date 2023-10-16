@@ -1,5 +1,6 @@
 "use client";
 import { Inset, Flex, Card, Box, Text } from "@radix-ui/themes";
+
 const DesignCard = ({
   title,
   image,
