@@ -150,7 +150,6 @@ const SubContent = ({ title }: { title: string }) => {
 const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
   const [show, setShow] = useState(true);
   const notificationRef = useRef(null);
-  // const targetRef = useRef(null);
 
   useEffect(() => {
     if (show) {
@@ -160,29 +159,9 @@ const CopiedNotification = ({ children }: { children: React.ReactNode }) => {
     }
   }, [show]);
 
-  // useEffect(() => {
-  //   if (targetRef.current && notificationRef.current) {
-  //     const targetRect = targetRef.current.getBoundingClientRect();
-  //     const notificationRect = notificationRef.current.getBoundingClientRect();
-
-  //     notificationRef.current.style.top = `${
-  //       targetRect.top - notificationRect.height
-  //     }px`;
-  //     notificationRef.current.style.left = `${targetRect.left}px`;
-  //   }
-  // }, [targetRef]);
-
   return (
     <>
       <div>{children}</div>
-      {/* <div
-        ref={notificationRef}
-        className={`absolute m-6 p-2 rounded text-white bg-black transition-opacity duration-500 ${
-          show ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        Copied!
-      </div> */}
     </>
   );
 };

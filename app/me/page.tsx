@@ -76,7 +76,7 @@ const Page = () => {
           title="Typescript"
           subTitle="Frontend & Backend"
           disableRightIcon={true}
-          textStyles="ml-16"
+          textStyles="md:mr-10.4rem mr-7.5rem"
         />
 
         <ProjectCard

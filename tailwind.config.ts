@@ -15,6 +15,10 @@ const config: Config = {
       },
       width: {
         'tablet': '32rem',
+      },
+      spacing: {
+        '7.5rem': '7.5rem',
+        '10.4rem': '10.4rem'
       }
     },
   },
