@@ -5,7 +5,7 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import ContentContainer from "@/components/ContentContainer";
 import SubContentContainer from "@/components/SubContentContainer";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 
 const CopiedNotification = ({
   show,
@@ -22,9 +22,9 @@ const CopiedNotification = ({
             position: "absolute",
             bottom: "30px",
             marginBottom: "0.5rem",
-            backgroundColor: "grey",
+            backgroundColor: "rgb(156 163 175)",
             color: "white",
-            padding: "10px",
+            padding: "8px",
             borderRadius: "5px",
           }}
         >
