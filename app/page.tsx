@@ -151,6 +151,17 @@ const SubContent = ({ title }: { title: string }) => {
   return (
     <SubContentContainer title={title}>
       <div className="my-2 flex flex-col gap-4 px-4">
+        <Link href="https://educator-ai-omega.vercel.app">
+          <ProjectCard
+            hover={true}
+            leftIcon={
+              <Image src="/ai.png" width={30} height={30} alt="next icon" />
+            }
+            title="Educator AI"
+            subTitle="Learn anything (Work in progress)"
+          />
+        </Link>
+
         <Link href="https://www.thoughtflow.app">
           <ProjectCard
             hover={true}
@@ -163,11 +174,11 @@ const SubContent = ({ title }: { title: string }) => {
               />
             }
             title="ThoughtFlow"
-            subTitle="Design, Backend & Frontend"
+            subTitle="Voice to notes (Work in progress)"
           />
         </Link>
 
-        <Link href="https://prompt-tester-alpha.vercel.app">
+        {/* <Link href="https://prompt-tester-alpha.vercel.app">
           <ProjectCard
             hover={true}
             leftIcon={
@@ -176,7 +187,7 @@ const SubContent = ({ title }: { title: string }) => {
             title="PromptArena"
             subTitle="Design, Backend & Frontend"
           />
-        </Link>
+        </Link> */}
       </div>
     </SubContentContainer>
   );
