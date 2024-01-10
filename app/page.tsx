@@ -1,9 +1,10 @@
 "use client";
+
 import { Button } from "@radix-ui/themes";
+import ContentContainer from "@/components/ContentContainer";
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import ContentContainer from "@/components/ContentContainer";
 import SubContentContainer from "@/components/SubContentContainer";
 import { useState } from "react";
 
@@ -142,7 +143,7 @@ const Content = () => {
         </div>
       </div>
 
-      <SubContent title="Projects" />
+      <SubContent title="Products" />
     </ContentContainer>
   );
 };
@@ -151,43 +152,21 @@ const SubContent = ({ title }: { title: string }) => {
   return (
     <SubContentContainer title={title}>
       <div className="my-2 flex flex-col gap-4 px-4">
-        <Link href="https://educator-ai-omega.vercel.app">
-          <ProjectCard
-            hover={true}
-            leftIcon={
-              <Image src="/ai.png" width={30} height={30} alt="next icon" />
-            }
-            title="Educator AI"
-            subTitle="Learn anything (Work in progress)"
-          />
-        </Link>
-
-        <Link href="https://www.thoughtflow.app">
+        <Link href="https://protutor.ai">
           <ProjectCard
             hover={true}
             leftIcon={
               <Image
-                src="/thought-bubble.png"
-                width={30}
-                height={30}
-                alt="next icon"
+                src="/protutor.png"
+                width={35}
+                height={35}
+                alt="Pro Tutor AI logo"
               />
             }
-            title="ThoughtFlow"
-            subTitle="Voice to notes (Work in progress)"
+            title="ProTutor AI"
+            subTitle="Generate study notes for anything."
           />
         </Link>
-
-        {/* <Link href="https://prompt-tester-alpha.vercel.app">
-          <ProjectCard
-            hover={true}
-            leftIcon={
-              <Image src="/ai.png" width={30} height={30} alt="next icon" />
-            }
-            title="PromptArena"
-            subTitle="Design, Backend & Frontend"
-          />
-        </Link> */}
       </div>
     </SubContentContainer>
   );

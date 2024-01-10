@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface IProjectCard {
-  leftIcon: JSX.Element;
+  leftIcon?: JSX.Element;
   title: string;
   subTitle: string;
   disableRightIcon?: boolean;
@@ -19,13 +19,13 @@ const ProjectCard = ({
 }: IProjectCard) => {
   return (
     <div
-      className={`flex justify-between border bg-white rounded-md items-center h-20 px-1 shadow-sm ${
+      className={`flex justify-between border bg-white rounded-md items-center h-32 px-1 shadow-sm ${
         hover ? "hover:shadow-xl transition-shadow duration-200" : ""
       }`}
     >
-      <div className="pl-2 md:pl-12 rounded-full">{leftIcon}</div>
+      {leftIcon && <div className="pl-2 md:pl-12 rounded-full">{leftIcon}</div>}
 
-      <div className={`flex flex-col gap-2 mx-auto ${textStyles || ""}`}>
+      <div className={`flex sm:pl-0 pl-3 flex-col gap-2 ${textStyles || ""}`}>
         <div className="font-bold">{title}</div>
         <div className="font-medium text-gray-500">{subTitle}</div>
       </div>
