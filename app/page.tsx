@@ -76,7 +76,7 @@ const Content = () => {
         <h1 className="text-2xl font-bold md:text-3xl"> Hamza Carew</h1>
 
         <div className="bg-green-200 px-1 rounded-full flex items-center justify-center w-40 font-semibold">
-          <h2>Fullstack Developer.</h2>
+          <h2>Fullstack Developer</h2>
         </div>
 
         <h3 className="my-2 font-medium text-gray-500">
