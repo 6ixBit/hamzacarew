@@ -19,23 +19,24 @@ const ProjectCard = ({
 }: IProjectCard) => {
   return (
     <div
-      className={`flex justify-between border bg-white rounded-md items-center h-32 px-1 shadow-sm ${
+      className={`flex justify-between items-center h-32 px-6 border bg-white rounded-md shadow-sm ${
         hover ? "hover:shadow-xl transition-shadow duration-200" : ""
       }`}
     >
-      {leftIcon && <div className="pl-2 md:pl-12 rounded-full">{leftIcon}</div>}
+      {leftIcon && <div className="flex-shrink-0 mr-8">{leftIcon}</div>}
 
-      <div className={`flex sm:pl-0 pl-3 flex-col gap-2 ${textStyles || ""}`}>
+      <div className={`flex flex-col gap-2 flex-grow ${textStyles || ""}`}>
         <div className="font-bold">{title}</div>
         <div className="font-medium text-gray-500">{subTitle}</div>
       </div>
 
       {!disableRightIcon && (
-        <div className="pr-2">
+        <div className="flex-shrink-0">
           <Image src="/next.png" width={20} height={20} alt="next icon" />
         </div>
       )}
     </div>
   );
 };
+
 export default ProjectCard;

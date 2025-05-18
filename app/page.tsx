@@ -100,20 +100,6 @@ const Content = () => {
               />
             </a>
 
-            <a
-              href="https://twitter.com/HeCodes404s"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/twitter.png"
-                width={30}
-                height={30}
-                alt="Twitter logo"
-                style={{ transition: "transform 0.2s" }}
-                className="hover:scale-110"
-              />
-            </a>
 
             <a
               href="https://github.com/6ixBit"
@@ -143,13 +129,37 @@ const Content = () => {
         </div>
       </div>
 
-      <SubContent title="Products" />
+      <SubContent title="SAAS Products" />
     </ContentContainer>
   );
 };
 
 const SubContent = ({ title }: { title: string }) => {
   return (
+    <>
+    
+
+    <SubContentContainer title={title}>
+      <div className="my-2 flex flex-col gap-4 px-4">
+        <Link href="https://rapid-product-launcher.vercel.app/">
+          <ProjectCard
+            hover={true}
+            leftIcon={
+              <Image
+                src="/protutor.png"
+                width={35}
+                height={35}
+                alt="Pro Tutor AI logo"
+              />
+            }
+            title="Rapid Product Launcher"
+            subTitle="Launch your product in seconds."
+          />
+        </Link>
+      </div>
+    </SubContentContainer>
+
+
     <SubContentContainer title={title}>
       <div className="my-2 flex flex-col gap-4 px-4">
         <Link href="https://protutor.ai">
@@ -169,6 +179,7 @@ const SubContent = ({ title }: { title: string }) => {
         </Link>
       </div>
     </SubContentContainer>
+    </>
   );
 };
 
