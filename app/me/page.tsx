@@ -9,10 +9,10 @@ const TimeLine = () => {
     <div className="flex flex-col p-4">
       <div className="flex flex-row gap-2 ">
         <div className="flex flex-row items-center">
-          <span className="pr-8 font-semibold ">2023</span>
+          <span className="pr-8 font-semibold ">2025</span>
 
           <span className="flex flex-col">
-            <span className=" font-extrabold">BenefitFocus</span>
+            <span className=" font-extrabold">Voya</span>
             <p className=" text-gray-500 mt-1">Fullstack Software Engineer</p>
             <div className="bg-green-200 w-24 rounded-full flex items-center justify-center font-semibold mt-2">
               <h2>Current</h2>
@@ -52,7 +52,7 @@ const TimeLine = () => {
 const Page = () => {
   return (
     <ContentContainer>
-      <div className="text-xl font-bold mb-2">My Tech Stack</div>
+      <div className="text-xl font-bold mb-2"> Tech Stack</div>
 
       <SubContentContainer>
         <ProjectCard
@@ -64,7 +64,7 @@ const Page = () => {
           disableRightIcon={true}
           textStyles="pr-44"
         />
-        <ProjectCard
+        {/* <ProjectCard
           leftIcon={
             <Image
               src="/typescript.png"
@@ -75,6 +75,21 @@ const Page = () => {
           }
           title="Typescript"
           subTitle="Frontend & Backend"
+          disableRightIcon={true}
+          textStyles="md:mr-10.4rem mr-7.5rem"
+        /> */}
+
+<ProjectCard
+          leftIcon={
+            <Image
+              src="/aws.svg"
+              width={30}
+              height={30}
+              alt="aws icon"
+            />
+          }
+          title="AWS"
+          subTitle="Hosting & Storage"
           disableRightIcon={true}
           textStyles="md:mr-10.4rem mr-7.5rem"
         />

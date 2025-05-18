@@ -137,30 +137,25 @@ const Content = () => {
 const SubContent = ({ title }: { title: string }) => {
   return (
     <>
-    
-
     <SubContentContainer title={title}>
-      <div className="my-2 flex flex-col gap-4 px-4">
+    <div className="my-2 flex flex-col gap-4 px-4 mb-3">
         <Link href="https://rapid-product-launcher.vercel.app/">
           <ProjectCard
             hover={true}
             leftIcon={
               <Image
-                src="/protutor.png"
-                width={35}
-                height={35}
-                alt="Pro Tutor AI logo"
+                src="/rpd.png"
+                width={45}
+                height={45}
+                alt="Rapid Product Launcher logo"
               />
             }
             title="Rapid Product Launcher"
-            subTitle="Launch your product in seconds."
+            subTitle="Launch ecom products on Shopify."
           />
         </Link>
       </div>
-    </SubContentContainer>
 
-
-    <SubContentContainer title={title}>
       <div className="my-2 flex flex-col gap-4 px-4">
         <Link href="https://protutor.ai">
           <ProjectCard
