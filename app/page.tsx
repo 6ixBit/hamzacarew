@@ -156,6 +156,24 @@ const SubContent = ({ title }: { title: string }) => {
         </Link>
       </div>
 
+      <div className="my-2 flex flex-col gap-4 px-4 mb-3">
+        <Link href="https://sol-search.vercel.app/">
+          <ProjectCard
+            hover={true}
+            leftIcon={
+              <Image
+                src="/solsearch.png"
+                width={45}
+                height={45}
+                alt="Sol Search logo"
+              />
+            }
+            title="Sol Search"
+            subTitle="The Solana Ecosystem Navigator."
+          />
+        </Link>
+      </div>
+
       <div className="my-2 flex flex-col gap-4 px-4">
         <Link href="https://protutor.ai">
           <ProjectCard

@@ -12,7 +12,7 @@ const Page = () => {
       <div className="text-xl font-bold mb-4">My Designs</div>
 
       <div className="flex flex-col gap-6">
-        <DesignCard
+        {/* <DesignCard
           onClick={() => {
             router.push("/design/mancity");
           }}
@@ -25,7 +25,7 @@ const Page = () => {
               alt="next icon"
             />
           }
-        />
+        /> */}
 
         <DesignCard
           onClick={() => {
